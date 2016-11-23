@@ -11,13 +11,20 @@ If you do not know how to do it the simplest way is to use [ffmpeg](https://ffmp
 
 For each bitrate you want ran the following command:
 
-```
-ffmpeg -i "[your file path]" -vf "scale=w=1280:h=720" -codec:v libx264 -profile:v high -level 31 -b:v 750 -b:a 96k -codec:a aac -profile:a aac_low -r 25 -g 50 -sc_threshold 0 -minrate 750 -maxrate 750 -bufsize 750 -x264opts ratetol=0.1 mg_750.mp4
-```
+<pre>
+
+fmpeg -i <b>"[your file path]"</b> -vf "scale=w=<b>1280</b>:h=<b>720</b>" \
+-codec:v libx264 -profile:v high -level 31 -b:v <b>750</b> \
+-b:a 96k -codec:a aac -profile:a aac_low -r 25 -g 50 -sc_threshold 0 -x264opts ratetol=0.1 \
+-minrate <b>750</b> -maxrate <b>750</b> -bufsize <b>750</b> mg_750.mp4
+
+</pre>
 
 In the above command line make sure you replace [your file path] with the path of the file with the content you want to stream.
 
 The above example produce a 750kb file. You can repeat the process with each bitrate you think is appropriate. 
+
+You should modify any bold parameter with the most appropriate for you.
 
 
 

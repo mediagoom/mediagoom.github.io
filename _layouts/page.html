@@ -1,14 +1,141 @@
----
-layout: default
----
-<article class="post">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}}</title>
+    
+    
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
 
-  <div class="post-content">
-    {{ content }}
-  </div>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-</article>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="Style/Site.css" rel="stylesheet">
+    
+    <style>
+    html,
+    body {
+        height: 100%;
+        padding-bottom:0px;
+    /* The html and body elements cannot have any padding or margin. */
+    }
+
+    /* Wrapper for page content to push down footer */
+    #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -40px;
+    }
+
+    /* Set the fixed height of the footer here */
+    #push,
+    #footer {
+        height: 40px;
+        }
+    #footer {
+        background-color: #f5f5f5;
+        }
+
+    /* Lastly, apply responsive CSS fixes as necessary */
+    @media (max-width: 767px) {
+        #footer {
+            margin-left: -20px;
+            margin-right: -20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    #logo
+        {
+           
+            margin-top:-10px;
+            height:200%;
+            width:auto;
+        }
+
+
+    </style>
+
+   
+
+</head>
+<body>
+
+    <!-- Part 1: Wrap all page content here -->
+    <div id="wrap">
+        
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand" href="/">
+                        <img id="logo" src="img/mediagoom-white.png" alt="MediaGoom" />
+                    </a>
+
+                    
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/Blog">Blog</a></li>
+                        <li>Download</li>
+
+
+
+                    </ul>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="container-fluid body-content full-height">
+		{{page.content}}
+            
+
+        <div id="push"></div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+            <div class="container">
+                <p></p>
+                <p></p>
+                <p>&copy; FFFF DateTime.Now.Year - Media Goom</p>
+            </div>
+        </div>
+
+        
+
+        {% if jekyll.environment == "production" %}
+        
+	PROD
+	
+	<script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', '@ezwave.Configuration.Settings.google_analytics_id', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+   	{% endif %} 
+</body>
+</html>
