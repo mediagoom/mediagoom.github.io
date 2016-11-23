@@ -3,6 +3,14 @@ layout: default
 title: test
 ---
 
+<pre>
+
+ffmpeg -i <b>"[your file path]"</b> -vf "scale=w=1280:h=720" -codec:v libx264 -profile:v high -level 31 -b:v 750 -b:a 96k -codec:a aac -profile:a aac_low -r 25 -g 50 -sc_threshold 0 -minrate 750 -maxrate 750 -bufsize 750 -x264opts ratetol=0.1 mg_750.mp4
+</pre>
+
+
+
+
 ----------
 
 [PLAY]: https://cdn.rawgit.com/mediagoom/Play/v0.0.3/index.html?src=https://cdn.rawgit.com/mediagoom/Play/v0.0.2/bb "Media Goom Sample Player"
@@ -87,7 +95,7 @@ echo $cmd
 
 ```
 
-bash```
+```bash
 
 url=https://dl.dropboxusercontent.com/u/33964970/mg.tar.gz
 
