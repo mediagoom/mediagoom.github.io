@@ -106,7 +106,8 @@
         <div class="container-fluid body-content full-height {{page.class}}" {{page.attrib}}>
 	
         {% if jekyll.environment == "production" %}
-		{{page.content | markdownify  }}
+		--prod--
+		{{content | markdownify  }}
 	{% else %}
 		{{content}}
 	{% endif %}
