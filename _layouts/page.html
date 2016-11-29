@@ -106,7 +106,7 @@
         <div class="container-fluid body-content full-height {{page.class}}" {{page.attrib}}>
 	
         {% if jekyll.environment == "production" %}
-		{{page.content}}
+		{{page.content | markdownify  }}
 	{% else %}
 		{{content}}
 	{% endif %}
@@ -121,7 +121,7 @@
             <div class="container">
                 <p></p>
                 <p></p>
-                <p>&copy; Media Goom - {{ "now" | date: "%Y" }}</p>
+                <p>&copy; Media Goom - {{ "now" | date: "%Y" }} v.0.1</p>
             </div>
         </div>
 
