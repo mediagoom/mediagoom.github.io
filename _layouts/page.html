@@ -104,7 +104,12 @@
 
         <!--{{page.attrib}}-->
         <div class="container-fluid body-content full-height {{page.class}}" {{page.attrib}}>
+	
+        {% if jekyll.environment == "production" %}
+		{{page.content}}
+	{% else %}
 		{{content}}
+	{% endif %}
             
 
         <div id="push"></div>
