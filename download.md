@@ -21,7 +21,7 @@ attrib: 'style="text-align: center"'
 
 ### Linux
 
-The *linux* download should work on most distribution as long as they are 64 bit.
+The *linux* download should work on most distributions as long as they are 64 bit.
 In case it should not work you can either [build](https://github.com/mediagoom/mg/wiki/Build) it yourself or use docker.
 
 After download make sure to run `chmod +x mg`
