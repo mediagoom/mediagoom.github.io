@@ -24,10 +24,10 @@ Once you have [optained](/download) mg you can run it using this parameters:
 
 ```bash
 ./mg -k:dash \
-     -o:[output directory]
-     -i:[first input file] -s:0 -e:0 -b:750
-     -j:[second input file] -b:350
-     -j:[therd input file] -b:120
+     -o:[output directory] \
+     -i:[first input file] -s:0 -e:0 -b:750 \
+     -j:[second input file] -b:350 \
+     -j:[therd input file] -b:120 \
      -j:[nth input file] -b:[nth bitrate]
 ```
 
