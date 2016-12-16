@@ -14,4 +14,4 @@ Test your content using
 Test the Media Goom Sample Player [Here](https://cdn.rawgit.com/mediagoom/Play/v0.0.3/index.html?src=https://cdn.rawgit.com/mediagoom/Play-dash/v0.0.2/bbb01).
 
 
-[Read More.->](https://github.com/mediagoom/mg/wiki/encode)
+[Read More.->](https://github.com/mediagoom/mg/wiki/serve)
