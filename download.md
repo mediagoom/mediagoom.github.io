@@ -2,20 +2,22 @@
 layout: page
 title: download
 permalink: /download/
-attrib: 'style="text-align: center"'
 ---
 
-# Download
 
-
+<div style="text-align: center">
+<h1>
+Download
+</h1>
 <p>
-<a class="btn btn-primary btn-lg reverse-header" href="https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/mg"
+<a class="btn btn-primary btn-lg reverse-header download-button" href="https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/mg"
 	role="button"> <i class="fa fa-linux" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Linux&nbsp;&nbsp;</a>
 </p>
 <p>
-<a class="btn btn-primary btn-lg reverse-header" href="https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/win-release.zip"
-                role="button"> <i class="fa fa-windows" aria-hidden="true"></i>&nbsp;windows </a>
+<a class="btn btn-primary btn-lg reverse-header download-button" href="https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/win-release.zip"
+                role="button"> <i class="fa fa-windows" aria-hidden="true"></i>&nbsp;&nbsp;windows &nbsp;&nbsp;</a>
 </p>
+</div>
 
 ---
 

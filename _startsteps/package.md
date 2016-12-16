@@ -8,17 +8,13 @@ Package allows to repackage statically your
  MP4 files in order
 to be used effectively streamed on the Internet.
 Packaging features:
-<ul>
-    <li>Statically package your mp4 files as:
-        <ul>
-            <li><a href="https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP">Dynamic Adaptive Streaming over HTTP (DASH)</a></li>
-            <!--
-            <li><a href="https://en.wikipedia.org/wiki/HTTP_Live_Streaming">HTTP Live Streaming (also known as HLS)</a></li>
-            -->
-            <li><a href="https://en.wikipedia.org/wiki/Adaptive_bitrate_streaming#Microsoft_Smooth_Streaming">Smooth Streaming</a></li>
-        </ul>
-    </li>
-</ul>
+
+
+[comment]: <> (https://en.wikipedia.org/wiki/HTTP_Live_Streaming">HTTP Live Streaming also known as HLS)
+ * Statically package your mp4 files as:
+ 1. [Dynamic Adaptive Streaming over HTTP (DASH)](https://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
+ 2. [Smooth Streaming](https://en.wikipedia.org/wiki/Adaptive_bitrate_streaming#Microsoft_Smooth_Streaming)
+
 
 
 The mg tool allow to statically package a set of mp4 files. 

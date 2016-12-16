@@ -3,8 +3,6 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{page.title}}</title>
-    
-    
 
 
 <!-- Latest compiled and minified CSS -->
@@ -12,6 +10,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
 <link href="/Style/Site.css" rel="stylesheet">
     
     <style>
@@ -53,53 +52,43 @@
     #logo
         {
            
-            margin-top:-10px;
-            height:200%;
+            margin-top:-1px;
+            height:40px;
             width:auto;
         }
 
 
+	.page-head{
+		background-color: rgb(30, 30, 30);
+
+	}
+
+	
+	.site-nav .page-link
+	{ color: white;}
+
+
+	.wrapper .site-title{margin-left:-110px;}
     </style>
 
+    
    
 
 </head>
 <body>
 
+	<div class="page-head">
+		    {% include header.html %}
+	</div>
     <!-- Part 1: Wrap all page content here -->
     <div id="wrap">
         
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-
-                    <a class="navbar-brand" href="/">
-                        <img id="logo" src="/img/mediagoom-white.png" alt="MediaGoom" />
-                    </a>
-
                     
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/Download">Download</a></li>
-                        
 
 
 
-                    </ul>
 
-
-
-                </div>
-
-            </div>
-        </div>
 
 
         <!--{{page.attrib}}-->
@@ -118,7 +107,14 @@
             </div>
         </div>
 
-        
+ <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+            crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+       
 
         {% if jekyll.environment == "production" %}
 	
@@ -132,6 +128,12 @@
           ga('send', 'pageview');
 
         </script>
-   	{% endif %} 
+   	{% endif %}
+
+	<script>
+		$( document ).ready(function(){
+			$('#logo').attr('src', 'http://mediagoom.com/img/mediagoom-white.png');
+			});
+	</script>
 </body>
 </html>
