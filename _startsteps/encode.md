@@ -3,7 +3,7 @@ title: Encode
 char: cog
 short: Encode your files to several bitrates for Adaptive Streaming. 
 ---
-First of all you need a media file you want to stream on the web.
+First of all, you need a media file you want to stream on the web.
 
 In order to stream the file you need to encode the file to several mp4 files with different bitrates and with key frames aligned.
 
@@ -23,7 +23,7 @@ fmpeg -i <b>"[your file path]"</b> -vf "scale=w=<b>1280</b>:h=<b>720</b>" \
 
 In the above command line make sure you replace [your file path] with the path of the file with the content you want to stream.
 
-The above example produce a 750kb file. You can repeat the process with each bitrate you think is appropriate. 
+The above example produces a 750kb file. You can repeat the process with each bitrate you think is appropriate. 
 
 You should modify any bold parameter with the most appropriate for you.
 
