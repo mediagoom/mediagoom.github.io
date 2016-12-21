@@ -14,8 +14,9 @@ Probably your first question is why hosting a video on your site when you can us
 
 There are very good explanations on the trade-offs of these scenario.
 Some of the best are:
-* [YouTube vs. Hosting on Your Own Site]( https://blogs.adobe.com/digitalmarketing/web-experience/youtube-vs-hosting-site/)
-* [Adding Video to Your Website: Why’s and How’s]( http://line25.com/articles/adding-video-to-your-website-whys-and-hows)
+
+ * [YouTube vs. Hosting on Your Own Site]( https://blogs.adobe.com/digitalmarketing/web-experience/youtube-vs-hosting-site/)
+ * [Adding Video to Your Website: Why’s and How’s]( http://line25.com/articles/adding-video-to-your-website-whys-and-hows)
 
 In case you decide to host your video than the mg tool can greatly help you.
 
