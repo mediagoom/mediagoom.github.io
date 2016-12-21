@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to MediaGoom!"
+title:  "MediaGoom essential Web Streaming"
 date:   2016-12-20 13:29:16 +0100
-categories: jekyll update
+categories: mg tool
 ---
-# Welcome
+# MediaGoom essential Web Streaming
