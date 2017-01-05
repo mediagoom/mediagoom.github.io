@@ -1,12 +1,34 @@
+---
+ate:   2016-12-20 13:29:16 +0100
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-  <url>
-      <loc>http://mediagoom.com/index.html</loc> 
-  </url>
-  <url>
-          <loc>http://mediagoom.com/download</loc> 
-  </url>
-  <url>
-    <loc>http://mediagoom.com/blog</loc> 
-  </url>
+   <url>
+   	<loc>{{ site.url }}</loc>
+	<priority>1.0</priority>
+   </url>
+   {% for my_page in site.pages %}
+   	 {% if my_page.date %}
+    <url>
+          <loc>{{ my_page.url | prepend: site.url }}"></loc>
+	  <lastmod>{{ my_page.date | date: "%Y-%m-%d" }}</lastmod>
+	  {% if my_page.priority %}
+	  <priority>{{ my_page.priority }}</priority>
+	  {% endif %}
+	  {% if my_page.changefreq %}
+	  <changefreq>{{ my_page.priority }}</changefreq>
+	  {% endif %}
+    </url>
+	 {% endif %}
+    {% endfor %}
+    {% for post in site.posts %}
+    <url>
+          <loc>{{ post.url | prepend: site.url }}"></loc>
+	  <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+
+    </url>
+    {% endfor %}
+
+
+
 </urlset>

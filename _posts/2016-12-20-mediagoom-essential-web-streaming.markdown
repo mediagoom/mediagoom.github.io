@@ -2,7 +2,7 @@
 layout: post
 title:  "MediaGoom essential Web Streaming"
 date:   2016-12-20 13:29:16 +0100
-categories: mg tool
+categories: mg
 ---
 # MediaGoom essential Web Streaming
 
@@ -18,7 +18,7 @@ Some of the best are:
  * [YouTube vs. Hosting on Your Own Site]( https://blogs.adobe.com/digitalmarketing/web-experience/youtube-vs-hosting-site/)
  * [Adding Video to Your Website: Why’s and How’s]( http://line25.com/articles/adding-video-to-your-website-whys-and-hows)
 
-In case you decide to host your video than the mg tool can greatly help you.
+In case you decide to host your video than the mg tool can help you.
 
 
 
