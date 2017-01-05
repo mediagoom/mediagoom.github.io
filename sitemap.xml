@@ -9,6 +9,7 @@ ate:   2016-12-20 13:29:16 +0100
    </url>
    {% for my_page in site.pages %}
    	 {% if my_page.date %}
+	 	{% unless my_page.hide %}
     <url>
           <loc>{{ my_page.url | prepend: site.url }}"></loc>
 	  <lastmod>{{ my_page.date | date: "%Y-%m-%d" }}</lastmod>
@@ -19,7 +20,9 @@ ate:   2016-12-20 13:29:16 +0100
 	  <changefreq>{{ my_page.priority }}</changefreq>
 	  {% endif %}
     </url>
+    		{% endunless %}
 	 {% endif %}
+	 
     {% endfor %}
     {% for post in site.posts %}
     <url>
