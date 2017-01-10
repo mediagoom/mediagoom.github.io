@@ -25,7 +25,7 @@ chmod +x mg
 ```
 
 Windows link:
-[Download windows build with HLS support of mg](https://ci.appveyor.com/api/buildjobs/7c0gykfjk875e85d/artifacts/win-release.zip)
+[Download windows build with HLS support of mg](https://ci.appveyor.com/api/buildjobs/hp52n8o4ststuvak/artifacts/win-release.zip)
 
 Once you have buildt or download the mg version supporting HLS you can use it exactly as you would do with MPEG-DASh just use *-k:hls* instead of *-k:dash* in the command line.
 
