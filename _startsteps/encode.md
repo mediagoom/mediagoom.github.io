@@ -27,7 +27,7 @@ The above example produces a 750kb file. You can repeat the process with each bi
 
 You should modify any bold parameter with the most appropriate for you.
 
-[Read More.->](https://github.com/mediagoom/mg/wiki/encode)
+[More Encoding Information ->](https://github.com/mediagoom/mg/wiki/encode)
 
 
 

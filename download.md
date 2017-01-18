@@ -10,11 +10,11 @@ permalink: /download/
 Download
 </h1>
 <p>
-<a class="btn btn-primary btn-lg reverse-header download-button" href="https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/mg"
+<a class="btn btn-primary btn-lg reverse-header download-button" href="https://github.com/mediagoom/mg/releases/download/v0.1.3/mg"
 	role="button"> <i class="fa fa-linux" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Linux&nbsp;&nbsp;</a>
 </p>
 <p>
-<a class="btn btn-primary btn-lg reverse-header download-button" href="https://github.com/mediagoom/mg/releases/download/mg-travis-0.0.2/win-release.zip"
+<a class="btn btn-primary btn-lg reverse-header download-button" href="https://github.com/mediagoom/mg/releases/download/v0.1.3/win-release.zip"
                 role="button"> <i class="fa fa-windows" aria-hidden="true"></i>&nbsp;&nbsp;windows &nbsp;&nbsp;</a>
 </p>
 </div>
