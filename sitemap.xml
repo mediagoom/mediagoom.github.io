@@ -7,11 +7,15 @@ ate:   2016-12-20 13:29:16 +0100
    	<loc>{{ site.url }}</loc>
 	<priority>1.0</priority>
    </url>
+   <url>
+   	<loc>{{ site.url }}/feed.xml</loc>
+	<priority>1.0</priority>
+   </url>
    {% for my_page in site.pages %}
    	 {% if my_page.date %}
 	 	{% unless my_page.hide %}
     <url>
-          <loc>{{ my_page.url | prepend: site.url }}"></loc>
+          <loc>{{ my_page.url | prepend: site.url }}></loc>
 	  <lastmod>{{ my_page.date | date: "%Y-%m-%d" }}</lastmod>
 	  {% if my_page.priority %}
 	  <priority>{{ my_page.priority }}</priority>
@@ -26,7 +30,7 @@ ate:   2016-12-20 13:29:16 +0100
     {% endfor %}
     {% for post in site.posts %}
     <url>
-          <loc>{{ post.url | prepend: site.url }}"></loc>
+          <loc>{{ post.url | prepend: site.url }}></loc>
 	  <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
 
     </url>
