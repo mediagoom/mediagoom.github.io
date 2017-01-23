@@ -30,7 +30,7 @@ ate:   2016-12-20 13:29:16 +0100
     {% endfor %}
     {% for post in site.posts %}
     <url>
-          <loc>{{ post.url | prepend: site.url }}></loc>
+          <loc>{{ post.url | prepend: site.url }}</loc>
 	  <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
 
     </url>

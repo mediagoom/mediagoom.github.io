@@ -9,7 +9,7 @@ excerpt: HLS. Http Live Streaming. How mg support it.
 
 As some of you may know at the moment the most adopted Adaptive Streaming implementation are MPEG-DASH and HLS.
 The mg tool already support packaging a series of *key frame aligned mp4* files to *MPEG-DASH*. 
-However, this functionality alone does not allows you to reach all major browser and all major devices.
+However, this functionality alone does not allows you to reach all major browsers and all major devices.
 In order to do so you need to package your *key frame aligned mp4* to *HLS* as well.
 Since we aim to provide a complete solution for web streaming we are working on implementing HLS besides MPEG-DASH.
 

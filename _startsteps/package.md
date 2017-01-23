@@ -1,12 +1,11 @@
 ---
 title: Package
 char: random
-short: Package your media file for use in used in any web server using mg tool.
+short: Package your media file for use in any web server with mg.
 ---
 
-Package allows to repackage statically your
- MP4 files in order
-to be used effectively streamed on the Internet.
+The mg tool allows you to package statically your
+ MP4 files. In this way you they can be effectively streamed on the Internet.
 Packaging features:
 
 

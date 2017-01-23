@@ -1,93 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page.title}}</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+<html>
 
+  {% include head.html %}
 
+  <body>
 
-<!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-<link href="/Style/Site.css" rel="stylesheet">
-    
-    <style>
-    html,
-    body {
-        height: 100%;
-        padding-bottom:0px;
-    /* The html and body elements cannot have any padding or margin. */
-    }
 
-    /* Wrapper for page content to push down footer */
-    #wrap {
-        min-height: 100%;
-        height: auto !important;
-        height: 100%;
-        /* Negative indent footer by it's height */
-        margin: 0 auto -40px;
-    }
+    {% include header.html %}
 
-    /* Set the fixed height of the footer here */
-    #push,
-    #footer {
-        height: 40px;
-        }
-    #footer {
-        background-color: #f5f5f5;
-        }
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
 
-    /* Lastly, apply responsive CSS fixes as necessary */
-    @media (max-width: 767px) {
-        #footer {
-            margin-left: -20px;
-            margin-right: -20px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-    }
+    {% include footer.html %}
 
-    #logo
-        {
-           
-            margin-top:-1px;
-            height:40px;
-            width:auto;
-        }
+  </body>
+
+</html>
 
 
-	.page-head{
-		background-color: rgb(30, 30, 30);
-
-	}
-
-	
-	.site-nav .page-link
-	{ color: white;
-	  background-color: rgb(30, 30, 30);
-	}
 
 
-	.wrapper {max-width:100%;}
-
-	@media screen and (max-width: 600px) { .site-nav { background-color: rgb(30, 30, 30) } };
-    </style>
 
     
    
 
-</head>
-<body>
-
-	<div class="page-head">
-		    {% include header.html %}
-	</div>
-    <!-- Part 1: Wrap all page content here -->
-    <div id="wrap">
         
 
                     
@@ -96,43 +39,3 @@
 
 
 
-
-        <!--{{page.attrib}}-->
-        <div class="container-fluid body-content full-height {{page.class}}" {{page.attrib}}>
-		{{content}}
-        <div id="push"></div>
-        </div>
-
-    </div>
-
-    <div id="footer">
-            <div class="container">
-                <p></p>
-                <p></p>
-                <p>&copy; Media Goom - {{ "now" | date: "%Y" }} v.0.1</p>
-            </div>
-        </div>
-
- <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin="anonymous"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-       
-
-        {% if jekyll.environment == "production" %}
-
-		{% include ga.html %}
-
-
-   	{% endif %}
-
-	<script>
-		$( document ).ready(function(){
-			$('#logo').attr('src', 'http://mediagoom.com/img/mediagoom-white.png');
-			});
-	</script>
-</body>
-</html>
