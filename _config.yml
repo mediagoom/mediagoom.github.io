@@ -19,7 +19,7 @@ twitter_username: mediagoom
 github_username:  mediagoom
 
 permalink: /blog/:title
-
+show_drafts: true
 # Build settings
 markdown: kramdown
 collections:
