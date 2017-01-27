@@ -17,7 +17,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://mediagoom.com" # the base hostname & protocol for your site
 twitter_username: mediagoom
 github_username:  mediagoom
-
+excerpt_separator: "<!--excerpt-->"
 permalink: /blog/:title
 show_drafts: true
 # Build settings

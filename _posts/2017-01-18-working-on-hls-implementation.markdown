@@ -3,7 +3,7 @@ layout: post
 title:  "Working on HLS implementation"
 date:   2017-01-18 13:29:16 +0100
 categories: mg
-excerpt: HLS. Http Live Streaming. How mg support it.
+#excerpt: HLS. Http Live Streaming. How mg support it.
 comments: true
 ---
 
@@ -13,6 +13,8 @@ The mg tool already support packaging a series of *key frame aligned mp4* files 
 However, this functionality alone does not allows you to reach all major browsers and all major devices.
 In order to do so you need to package your *key frame aligned mp4* to *HLS* as well.
 Since we aim to provide a complete solution for web streaming we are working on implementing HLS besides MPEG-DASH.
+
+<!--excerpt-->
 
 So we are hard at work to reach our goal. At this point we already have something working. 
 In case you are interested you can use our dev-win branch in windows or our dev-nx branch in linux to build a version of mg capable of packaging to HLS.

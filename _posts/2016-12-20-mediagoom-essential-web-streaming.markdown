@@ -9,6 +9,8 @@ Today we are happy to announce the first release of mediagoom tool.
 This open source tool let you create adaptive video chunks to be then statically hosted in any web server.
 In this way you can effectively host a video in your web site.
 
+<!--excerpt-->
+
 Probably your first question is why hosting a video on your site when you can use youtube or something similar.
 
 There are very good explanations on the trade-offs of these scenario.
