@@ -1,1 +1,1 @@
-Sitemap: http://mediagoom.com/sitemap.xml
+Sitemap: https://mediagoom.com/sitemap.xml

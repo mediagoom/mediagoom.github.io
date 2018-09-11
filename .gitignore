@@ -6,4 +6,6 @@ _site/
 *.swp
 *.lock
 
+assets/mgicons
+
 

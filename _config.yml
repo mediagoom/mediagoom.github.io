@@ -14,7 +14,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Providing the open source community with Web Streaming
   tools for mpeg-dash, hls and DRM.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mediagoom.com" # the base hostname & protocol for your site
+url: "https://mediagoom.com" # the base hostname & protocol for your site
 twitter_username: mediagoom
 github_username:  mediagoom
 excerpt_separator: "<!--excerpt-->"
