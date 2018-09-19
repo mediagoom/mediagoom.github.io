@@ -137,7 +137,7 @@ write_file(v, cnt)
 To start you need to understand in witch environment you are. Either [@appveyour] or [@travisci] [tr].  
 Once you know where you are you need to understand whether you are building a tag or not. If you are not building a tag you are not releasing, so you can either do nothing or just use the incremental build number to just be able to distinguish each build in case you are going to do further testing.  
 In case of a tag build, you are releasing so you need to insert the tag in your source code. In our case we use a very simple approach: we have a header file with a function and we write the full file before the build.  
-When the build finish both @appveyour and [@travisci] [tr] can be configured to upload the result of your build to Github releases. In order to have both of them adding binaries to the same release you have to specify the *same release name*. We simply use the tag as the release name.
+When the build finish both [@appveyour] and [@travisci] [tr] can be configured to upload the result of your build to Github releases. In order to have both of them adding binaries to the same release you have to specify the *same release name*. We simply use the tag as the release name.
 
 
 ## Appveyour
