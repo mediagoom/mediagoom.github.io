@@ -8,10 +8,10 @@ Deploy your content to any web server and then you can play it.
 
 Test your content using 
 
-`http://cdn.rawgit.com/mediagoom/Play/v0.0.3/index.html?src=<the url of the folder where the mg output is>`
+`http://cdn.rawgit.com/mediagoom/Play/master/index.html?src=<the url of the folder where the mg output is>`
 
 
-[Test the Media Goom Sample Player >>](http://play.mediagoom.com/play/?src=/dash).
+[Test the Media Goom Sample Player >>](https://defgroupdisks.blob.core.windows.net/builds/PLAYER/Ubuntu/master/index.html?src=/builds/SINTEL/STATIC/).
 
 
 [More Information on publishing your video ->](https://github.com/mediagoom/mg/wiki/serve)

@@ -2,7 +2,8 @@
 layout: post
 title:  "How-to automate a @GitHub release using @travisci and @appveyor"
 date:   2017-01-31 13:29:16 +0100
-categories: mg
+reviewed: 2018-09-14 09:26:00 +0200
+categories: mg test build
 #excerpt: How to automate a release process using a version tag and builds from travisci and appveyour.
 comments: true
 ---
@@ -20,20 +21,25 @@ No matter how good you are at writing software, sooner or later you will make a 
 Once you realize this as a fact then you have to get organized for when something bad happen.
 
 Whatever your strategy is, one really important aspect is:  
-how you can correlate software version the user is using with the source code from which it originated?
+how can you correlate the software version the user is using with the source code from which it was built?
 
 Well the answer is easy isn't it? just use a **git tag** and write the same version in your compiled software. 
-Perfect. That's exactly what we do. We have just automated it so we can never forget.  
+Perfect. That's exactly what we are going to do. We will just automate it so we will never forget it.  
 
 <!--excerpt-->
 
 If you are interested in what we have done just read on.  
 
 
-Well first of all, you need a Github project. You should already have automated the build with [@travisci] [tr] for Linux/mac builds and [@appveyor] [apv] for Windows builds. 
+Well first of all, you need a Github project. You should already have automated the build with [@travisci] [tr] for Linux/Mac builds and [@appveyor] [apv] for Windows/Linux builds. 
 We will not enter into the details of setting up automated builds or automated tests however in case you think this should be an interesting topic just let us know. 
 So you have your builds succeeding and passing all test and you are ready to release, and now what? 
-Now you need to create a tag, pass that tag to your source code and then have the output of the build linked back to the Github tag as a Release. 
+Now you need to:
+- Create a tag
+- Pass that tag to your source code 
+- Insert the tag in your copiled assets 
+- Create a Github Release
+Now anything bad should appen to a user you can use your software version to get the exact code from where it was built.
 
 Let's view each steps in details.
 
@@ -128,7 +134,7 @@ print cnt
 write_file(v, cnt)
 ```
 
-To start you need to understand in witch environment you are. Either @appveyour or [@travisci] [tr].  
+To start you need to understand in witch environment you are. Either [@appveyour] or [@travisci] [tr].  
 Once you know where you are you need to understand whether you are building a tag or not. If you are not building a tag you are not releasing, so you can either do nothing or just use the incremental build number to just be able to distinguish each build in case you are going to do further testing.  
 In case of a tag build, you are releasing so you need to insert the tag in your source code. In our case we use a very simple approach: we have a header file with a function and we write the full file before the build.  
 When the build finish both @appveyour and [@travisci] [tr] can be configured to upload the result of your build to Github releases. In order to have both of them adding binaries to the same release you have to specify the *same release name*. We simply use the tag as the release name.
