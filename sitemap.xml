@@ -15,7 +15,7 @@ ate:   2016-12-20 13:29:16 +0100
    	 {% if my_page.date %}
 	 	{% unless my_page.hide %}
     <url>
-          <loc>{{ my_page.url | prepend: site.url }}></loc>
+          <loc>{{ my_page.url | prepend: site.url }}</loc>
 	  <lastmod>{{ my_page.date | date: "%Y-%m-%d" }}</lastmod>
 	  {% if my_page.priority %}
 	  <priority>{{ my_page.priority }}</priority>
