@@ -1,451 +1,74 @@
 ---
-date: 2017-01-05 12:00:00 
-description: MediaGoom is an open source project. It allows to effectively implement Web Streaming in any web site. Support MPEG DASH (dynamic adaptive streaming over http) and HLS (Http Live Streaming).
+date: 2019-01-25 12:00:00 
+description: MediaGoom is an open source media streaming Framework. It aims to effectively implement Web Streaming. It supports MPEG DASH (dynamic adaptive streaming over http) and HLS (Http Live Streaming).
+title: Home
+order: 1
 ---
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<meta name="msvalidate.01" content="DF9F9B82203EBFA91D3314C58C962FEE" />
     
-    <meta name="description" content="{{page.description}}">
-
+    <meta name="description" content="{{ page.description }}">
 
     <title>Media Goom. Essential Adaptive Web Streaming with MPEG DASH and HLS.</title>
     
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     
-    
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/main2.css" rel="stylesheet">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-
-<link href="Style/Site.css" rel="stylesheet">
-
-<!--
-<script async="" src="index_files/analytics.js"></script>
-<script src="index_files/jquery-1.js"></script>
--->
-    
-    <style>
-        html,
-        body {
-            height: 100%;
-            background-color: white;
-            margin: 0px;
-            padding: 0px;
-
-            color: #1e1e1e; 
-            
-        }
-
-        .body-container
-        {
-            padding:10px;
-        }
-
-        .padding-element
-        {
-            padding:5px;
-        }
-
-
-        .box-body
-        {
-            
-            padding-right: 5px; 
-            padding-left: 5px; 
-            font-size: 20px;
-        }
-
-        
-        
-
-        .shadow{text-shadow: 4px 3px 0px rgba(255,255,255,0.15);}
-
-        .mid-body
-        {
-            /*background-color: #bfbfbf;*/
-            background-color: rgba(255, 255, 255, 0.90);
-            color: black;
-            /*margin-left: -25px;
-            margin-right: -25px;
-
-            padding-left: 50px;
-            padding-right: 50px;
-
-            padding-bottom:80px;
-	    */
-        }
-
-        .big_header
-        {
-            text-align: center;
-            background-color:#1e1e1e;
-            padding-top:25px;
-
-            
-            
-        }
-        
-        
-        .main-menu
-        {
-            padding-bottom: 25px;
-            
-        }
-
-        .main-menu-button
-        {           
-           padding-right:25px;
-        }
-        /*color:#e9e9e9;*/
-        .main-menu-hamburger-button
-        {           
-            float:right;
-            background-repeat:no-repeat;
-            border: none;
-            cursor:pointer;
-            overflow: hidden;
-            outline:none;
-            font-size:x-large;
-        }     
-
-        .main-menu-collapse
-        {
-            background-color:transparent;
-            text-align:left;
-        }
-
-        .title
-        {
-            color:rgba(255, 255, 255, 0.90);
-            /*font-family: "Open Sans Light", sans-serif;*/
-            background-color: #1e1e1e;
-            
-        }
-
-        .reverse-header
-        {
-            background-color:rgba(255, 255, 255, 0.90);
-            color: #1e1e1e;
-            border-color:rgba(255, 255, 255, 0.60);
-            min-width: 190px;
-        }
-
-        .reverse-header:hover
-        {
-            background-color:rgba(255, 255, 255, 0.60);
-        }
-
-        
-
-        .argument-title
-        {
-
-        }
-
-        .box-title
-        {
-            margin-right: 10px; 
-            display: inline-block; 
-            white-space: normal;
-            position: relative;
-            top: -5px;
-        }
-
-        
-
-        .action {
-            font-size:40px;
-            color: #1e1e1e;
-        }
-
-        .chapter
-        {
-            /*
-            padding-left: 50px;
-            padding-right: 50px;
-            */
-            margin: 5px;
-        }
-
-        .page-footer
-        {
-            background-color: #1e1e1e;
-            min-height: 100px;
-            margin-top: -10px;
-
-            color: rgba(255, 255, 255, 0.90);
-
-            padding-top: 5%;
-            padding-left: 5%;
-            padding-right: 5%;
-            padding-bottom: 1%;
-        }
-
-        .page-footer a
-        {
-            color: rgba(255, 255, 255, 0.90);
-        }
-
-        .copyright
-        {
-            text-align:center;
-        }
-
-
-
-        /* Lastly, apply responsive CSS fixes as necessary */
-        @media (max-width: 767px) {
-            #footer {
-                margin-left: -20px;
-                margin-right: -20px;
-                padding-left: 20px;
-                padding-right: 20px;
-            }
-        }
-    </style>
-
-    
-    
-
-
-<style type="text/css"></style></head>
+</head>
 <body>
 
-   
-            
-
-
-
-
-
-
-    <div class="jumbotron big_header">
-        <!--
-        <div class="main-menu title">
-            <div class="main-menu-button row-max-width">
-                <button class="title main-menu-hamburger-button" type="button" data-toggle="collapse" data-target="#collapsemenu">
-                    <span class="glyphicon glyphicon-menu-hamburger"></span>
-                </button>
-            </div>
-
-            <div class="navbar-inverse collapse title main-menu-collapse row-max-width" id="collapsemenu">
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="http://ezwave.azurewebsites.net/blog"><i class="fa-file-text fa"></i>&nbsp;Blog</a></li>
-                    </ul>
+        <header>
+            <div id="overlay">
+                <div id="menu">
+                {% include nav.html %}
                 </div>
-            </div>
+                <div id="title">
+                    
+                    <h1>
+                        Media Goom. 
+                        <br> Essential Adaptive Web Streaming with MPEG-DASH and HLS.
+                        <br> An Open Source Media Framework.
+                    </h1>
 
-        </div>
-            -->
+                    <a href="#works"><div class="first-btn">How it works<span class="icon-chevron-right"></span></div></a>
+                    <a href="#started"><div>Getting Started<span class="icon-chevron-right"></span></div></a>
+
+                    
+
+                </div>
+
+                    
+            </div>
+        </header>
+        
+        <main>
+            <h2 id="works">How it works</h2>
+            {{ page.description }}
+            <br>
+            It's composed of several <a href="/projects">projects</a>. The main ones are:
+
+
+
+            <h2 id="started">Getting Started</h2>
+
+
+        </main>
         
 
 
 
 
-        <div class="title">
-            <h1>Media Goom. Essential Free Web Streaming.</h1>
-            <h3>Use MPEG-DASH and HLS to effectively serve your video. </h3>
-            <p>&nbsp;</p>
-            <p></p>
-            
-            <p><a class="btn btn-primary btn-lg reverse-header" href="/download/" 
-	    		role="button"><i class="fa fa-download" aria-hidden="true"></i>&nbsp;download</a></p>
-            <p><a class="btn btn-primary btn-lg reverse-header" href="https://github.com/mediagoom/mg" 
-	    		role="button"><i class="fa fa-github" aria-hidden="true"></i>&nbsp;GitHub</a></p>
-        </div>
-    </div>
 
-
-<div class="body-container">
-
-
-
-        <div class="row row-max-width">
-       
-       {% for action in site.startsteps %}
-
-                <div class="col-md-4">
-                    <div class="argument-box">
-                        <div class="argument-title">
-                            <a href="#{{action.title}}">
-                                <div style="display:inline-block;margin:10px;">
-                                    <span class="glyphicon glyphicon-{{action.char}} action"></span>
-                                </div>
-
-                                <div class="box-title">
-                                    <h2>{{action.title}}</h2>
-                                </div>
-                            </a>
-                        </div>
-
-                        <p class="box-body">
-                            
-			{{action.short}}
-
-                        </p>
-                    </div>
-
-                </div>
-
-	{% endfor %}
-
-
-
-
-    <p>&nbsp;</p>
-
-        <div class="mid-body">
-            
-	    <div class="row row-max-width">
-                <div class="col-md-12" style="text-align: center;">
-                    <a name="WhyMediaGoom"></a>
-                    <h2 class="">Why MediaGoom</h2>
-
-                            <div class="chapter" style="text-align: left;margin-top:25px">
-			    	<div class="chapter-body">
-
-
-                Add or improve your video communication.
-                MediaGoom let you use video on the web effectively since using adaptive streaming let you:
-				<ul>
-					<li>improve media startup time</li>
-					<li>use your bandwidth evenly</li>
-					<li>give each user the best possible experience based on their bandwidth</li>
-				</ul>
-				
-				Essential since does not require any infrastructure in your site in order to achieve this. It just uses plain files.
-				</div>
-
-
-			</div>
-                 </div>
-	   </div>
-
-
-            <div class="row row-max-width">
-                <div class="col-md-12" style="text-align: center;">
-                    <a name="howitworks"></a>
-                    <h2 class="">How It Works</h2>
-                </div>
-            </div>
-            
-       {% for action in site.startsteps %}
-	
-
-                <div class="row row-max-width">
-                    <div class="col-md-12">
-                        <div class="chapter">
-                            <a name="{{action.title}}"></a>
-
-                            <h4 class="chapter-title">{{action.title}}</h4>
-
-                            <div class="chapter-body">
-				{{action.content}}
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-       {% endfor %}
-       
-       </div>
-
-
-
-
-    </div>
-
-
-
-
-    </div>
-
-
-    <div class="page-footer">
-        <div class="row row-max-width">
-       
-            <div class="col-md-4">
-                <div class="footer-info">
-                    <h3>Community:</h3>
-                    <p><i class="fa-twitter fa"></i>&nbsp;<a href="https://twitter.com/mediagoom">Twitter</a></p>
-                    <p><i class="fa-facebook fa"></i>&nbsp;<a href="http://www.facebook.com/mediagoom">Facebook</a></p>
-                    
-                </div>
-            </div>
-
-
-
-            <div class="col-md-4">
-                <div class="footer-info">
-                    <h3>About Us:</h3>
-                    <p><i class="fa-envelope fa"></i>&nbsp;<a href="mailto://info@mediagoom.com">Contact</a></p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="footer-info">
-                    <h3>Resources:</h3>
-                    
-                    <p>
-                    
-                        <svg aria-hidden="true" style="fill:rgba(255, 255, 255, 0.90);" 
-                             height="16" version="1.1" viewBox="0 0 16 16" width="16">
-                        <path fill-rule="evenodd" d="M3 5h4v1H3V5zm0 3h4V7H3v1zm0 2h4V9H3v1zm11-5h-4v1h4V5zm0 2h-4v1h4V7zm0 2h-4v1h4V9zm2-6v9c0 .55-.45 1-1 1H9.5l-1 1-1-1H2c-.55 0-1-.45-1-1V3c0-.55.45-1 1-1h5.5l1 1 1-1H15c.55 0 1 .45 1 1zm-8 .5L7.5 3H2v9h6V3.5zm7-.5H9.5l-.5.5V12h6V3z"></path></svg>
-                    
-                    
-                        &nbsp;<a href="https://github.com/mediagoom/mg/wiki">Wiki</a>
-		   </p>
-   
-                    <p><i class="fa-file-text-o fa"></i>&nbsp;<a href="/blog/">blog</a></p>
-                 </div>
-             </div>
-
-
-        </div>
-        <div class="row row-max-width">
-            <div class="col-md-4">
-            </div>
-            <div class="col-md-4">
-                <div class="footer-info">
-                    <p> Media Goom&nbsp;<i class="fa-copyright fa"></i> - 2017</p>
-                </div>
-            
-            </div>
-            <div class="col-md-4"></div>
-         </div>
-   </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-            crossorigin="anonymous"></script>
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-
-
-    <!--
-
-                <script src="index_files/ezwave"></script>
-    -->
-
-        {% if jekyll.environment == "production" %}
-
-
-
-{% include ga.html %}            
-
-
-
+    {% if jekyll.environment == "production" %}
+        {% include ga.html %}            
 	{% endif %}
 
 </body>

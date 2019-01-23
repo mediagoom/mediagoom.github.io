@@ -1,0 +1,163 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Our variables
+$logourl: "/assets/bg.jpg";
+$headfontcolor: #ffffff;
+$overcolor: #333f50;
+$overcolor-transparent: rgba($overcolor, 0.5);//  rgba(51, 63, 80, 0.5); // ;
+$light : lighten($overcolor, 30%);
+$dark : darken($overcolor, 10%);
+$head-height: 100%;
+
+@import
+        "media-query"
+        , "icomoon"
+
+;
+
+html { 
+    height: 100%;
+
+  }
+
+body {
+    //display: flex;
+    //flex-direction: column;
+    height: 100%;
+}
+
+header {
+    background: url($logourl) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: $head-height;;
+}
+
+main {
+    margin: 1em;
+    color: $overcolor;
+    font-size: 1.2em;
+
+}
+
+.site-nav .page-link {
+    color: $headfontcolor;
+
+    @include media-query($on-palm) {
+        color: $overcolor; 
+    }
+}
+
+div#overlay {
+    height: $head-height;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: radial-gradient(at bottom, rgba(#0c3270, 0.7) 20%, $light);
+    background-color: $overcolor-transparent;
+    
+    color: $headfontcolor;
+
+    display: flex;
+    flex-direction: column;
+
+    div#menu
+    {
+        
+        padding-right: 2em; 
+        height: $menu-height;
+        background-color: rgba($overcolor, 0.7);
+    }
+    
+    div#title {
+         margin-left: auto; margin-right: auto;
+         //max-width: 20em;
+         text-align: center;
+         padding: 0em 1em 0em 1em;
+        
+                  
+        h1 {  
+            display: inline;
+            font-size: 3em;
+            
+        }
+
+        .first-btn {
+            margin-top: 3em;
+        }
+
+
+        @include media-query($on-palm) {
+                
+            h1 {font-size: 2em;}
+
+            .first-btn {
+                    margin-top: 1.5em;
+                
+            }
+        }
+
+        a {
+
+            &:visited
+                {
+                    color: $headfontcolor; 
+                }
+            
+
+            div {
+
+                font-size: 1.5em;
+
+                border: 1px;
+        
+                border-style: solid;
+                border-radius: 5px;
+                max-width: 10em;
+                background-color: $light;
+                margin-bottom: 0.5em;
+                margin-left: auto;
+                margin-right: auto;
+
+                cursor: pointer; 
+
+                span {
+                    display: inline;
+                    float: right;
+                    border: 0em;
+                    margin-right: .2em;
+                    margin-top: 0.3em;
+                    font-size: 1em;
+                }
+
+                &:hover
+                {
+                    background-color: $dark;
+                }
+
+                &:active
+                {
+                    border-style: inset;
+                }
+                              
+
+               
+               
+
+            }
+
+            
+
+        }
+
+       
+    }
+    
+}
+
+

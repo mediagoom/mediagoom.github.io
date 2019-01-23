@@ -12,9 +12,12 @@
       <div class="trigger">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-	  	{% unless my_page.hide %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
-	  	{% endunless %}
+            {% unless my_page.hide %}
+            {% capture href %}{% unless my_page.href %}{{ my_page.url | prepend: site.baseurl }}{% else %}{{ my_page.href }}{% endunless %}{% endcapture %}
+              <a class="page-link" href="{{ href }}"
+                {% if page.order %}style="order:{{my_page.order}};"{% endif %}
+              >{{ my_page.title }}</a>
+	  	      {% endunless %}
           {% endif %}
         {% endfor %}
       </div>
