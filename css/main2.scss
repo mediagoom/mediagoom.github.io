@@ -111,7 +111,7 @@ div#overlay {
            font-size: 12em;
         }
 
-        @include media-query-height(800px)
+        @include media-query-width-height(800px, 800px)
         {
             .main-logo
             {
@@ -125,7 +125,7 @@ div#overlay {
             }
         }
 
-        @include media-query-height(650px)
+        @include media-query-width-height(300px, 650px)
         {
             .main-logo
             {
@@ -159,7 +159,6 @@ div#overlay {
                 font-size: 1.5em;
 
                 border: 1px;
-        
                 border-style: solid;
                 border-radius: 5px;
                 max-width: 10em;
@@ -188,20 +187,77 @@ div#overlay {
                 {
                     border-style: inset;
                 }
-                              
-
-               
-               
 
             }
 
-            
-
         }
-
        
     }
     
+}
+
+div#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    > div {
+        border: 1px;
+        border-style: solid;
+        border-radius: 5px;
+        width: 18em;
+        margin: 0 .5em 0 .5em;
+        
+        > a 
+        {
+            &:visited
+            {
+                color: $overcolor;
+            }
+
+            &:hover
+            {
+                color: $headfontcolor;
+                
+            }
+        
+            > div
+            {
+                margin: 1em;
+                display: flex;
+                align-items: center;
+                
+                &:hover
+                {
+                    background-color: $overcolor; 
+                }
+
+                > span 
+                {
+                                                
+                    &:first-child
+                    {
+                        margin-right: 0.5em;
+                        font-size: 3em;
+                    }
+
+                    &:nth-child(2)
+                    {
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+
+        > div
+        {
+            margin: 1em;
+            border-top: 1px solid $dark;
+            padding-top: 1.5em;
+        }
+                
+    }
 }
 
 

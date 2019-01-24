@@ -22,3 +22,9 @@ $on-laptop:        800px;
         @content;
     }
 }
+
+@mixin media-query-width-height($width, $height) {
+    @media screen and (max-height: $height), screen and (max-width: $width)  {
+        @content;
+    }
+}
