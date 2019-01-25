@@ -12,6 +12,8 @@ $light : lighten($overcolor, 30%);
 $dark : darken($overcolor, 10%);
 $head-height: 100%;
 
+$main-width: 800px;
+
 @import
         "media-query"
         , "icomoon"
@@ -49,7 +51,7 @@ main {
     h2 {text-align: center;}
 
     div {
-        max-width: 800px;
+        max-width: $main-width;
     }
 
 }
@@ -206,7 +208,7 @@ div#projects {
         border: 1px;
         border-style: solid;
         border-radius: 5px;
-        width: 18em;
+        width: 18em; 
         margin: 0 .5em 0 .5em;
         
         > a 
@@ -260,4 +262,43 @@ div#projects {
     }
 }
 
+footer {
+    width: 100%;
+    //background: lightgray;
+    
+    
+    > div
+    {
+        width: 94%;
+        max-width: $main-width; 
+        margin: 0em auto 0em auto;
+        border-top: 1px solid $dark;
+        > div
+        {
+            
+            margin: 1em 0em 1em 0em;
+            display: flex;
+            justify-content: center;
 
+            a {
+                color: $light;
+
+                &:not(:last-child)
+                {
+                    margin-right: 1.2em;
+                }
+
+                &:visited
+                {
+                    color: $light;
+                }
+            }
+
+            span { 
+                font-size: 1.6em; 
+
+                
+            }
+        }
+    }
+}
