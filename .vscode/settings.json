@@ -3,5 +3,8 @@
     "editor.insertSpaces": true,
     "files.exclude": {
         "_site/": true
-    }
+    },
+    "cSpell.words": [
+        "streamable"
+    ]
 }

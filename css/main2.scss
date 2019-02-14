@@ -5,14 +5,7 @@
 
 // Our variables
 $logourl: "/assets/bg.jpg";
-$headfontcolor: #ffffff;
-$overcolor: #333f50;
-$overcolor-transparent: rgba($overcolor, 0.5);//  rgba(51, 63, 80, 0.5); // ;
-$light : lighten($overcolor, 30%);
-$dark : darken($overcolor, 10%);
-$head-height: 100%;
 
-$main-width: 800px;
 
 @import
         "media-query"
@@ -115,6 +108,8 @@ div#overlay {
 
         @include media-query-width-height(800px, 800px)
         {
+            
+
             .main-logo
             {
                 margin-top: 2em;
@@ -198,67 +193,20 @@ div#overlay {
     
 }
 
-div#projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    > div {
-        border: 1px;
-        border-style: solid;
-        border-radius: 5px;
-        width: 18em; 
-        margin: 0 .5em 0 .5em;
-        
-        > a 
-        {
-            &:visited
-            {
-                color: $overcolor;
-            }
 
-            &:hover
-            {
-                color: $headfontcolor;
-                
-            }
-        
-            > div
-            {
-                margin: 1em;
-                display: flex;
-                align-items: center;
-                
-                &:hover
-                {
-                    background-color: $overcolor; 
-                }
-
-                > span 
-                {
-                                                
-                    &:first-child
-                    {
-                        margin-right: 0.5em;
-                        font-size: 3em;
-                    }
-
-                    &:nth-child(2)
-                    {
-                        font-size: 1.5em;
-                    }
-                }
-            }
-        }
-
-        > div
-        {
-            margin: 1em;
-            border-top: 1px solid $dark;
-            padding-top: 1.5em;
-        }
-                
+ul 
+{
+    list-style: none;
+    list-style-position: outside;
+    
+    li:before
+    {
+        content: '\f00c';
+        margin: 0 0.2em 0 -1.2em;    /* any design */
+        font-family: 'icomoon';
+        color: $light;
+        //position: relative;
+        //left: -16px;
     }
 }
 
