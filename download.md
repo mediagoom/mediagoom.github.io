@@ -2,6 +2,7 @@
 layout: page 
 title: download
 permalink: /download/
+hide: true
 ---
 
 

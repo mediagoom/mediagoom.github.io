@@ -1,0 +1,40 @@
+
+$menu-height: 4em;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+$overcolor: #333f50;
+$headfontcolor: #ffffff;
+
+$overcolor-transparent: rgba($overcolor, 0.5);//  rgba(51, 63, 80, 0.5); // ;
+$light : lighten($overcolor, 30%);
+$dark : darken($overcolor, 10%);
+$head-height: 100%;
+
+$main-width: 800px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-height($device) {
+    @media screen and (max-height: $device) {
+        @content;
+    }
+}
+
+@mixin media-query-width-height($width, $height) {
+    @media screen and (max-height: $height), screen and (max-width: $width)  {
+        @content;
+    }
+}
